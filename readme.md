@@ -1,21 +1,17 @@
-Vlipco's Website
+Blocks template
 ===============
 
-# How to use this repo
+# Key points for the busy person
 
-You need node v.0.10 or older, then install the following _global dependencies_ with `npm install -g <pkg-name>`:
+This is a stripped down version of the original site I built this tool for. I think building informational web (landing pages for products or organizations) is a very customized process and every page has to be appealing and full of contrast and interest to tell a compelling story. This makes such a thing slow. If you want a Dribbble quality site you have to work very hard for it and reusability is not great.
 
-* broccoli-cli
-* bower
+This repo provides an example of a block driven page design. You don't think about the page as in premade wordpress templates, instead you compose your page according to the pieces of information. You can reuse existing blocks and customize them. You define variation points per block, e.g: title, wether css classes can be customized, copy, buttons, etc. Your block is filled like a form, you stack them and create a page.
 
-After you have the global deps, you can install this repo's dependencies with:
+As a prove of concept this is a static site generator with broccoli but this could evolve into a full website builder with UI enabling maximum reusability and design control while allowing content changes with clear boundaries. We could create shareable blocks, structure boundaries between dependencies and convert blocks to react components that could be used for rich editing experiences in a UI and also as isomorphic components used on the server side to render the final version of a site.
 
-* `npm install`
-* `bower install`
+The key point to take here is that I don't know of any website builder with full design control that is open source and doesn't consider the page the unit of operation but instead each block or section within it. If I have to make a comparisson to something existing I'd say http://designmodo.com/generator/ is pretty close but strictly oriented to DesignModo startup package. The same arguments that react presents to explain markup, js and styling coupling should apply to website builders. React itself is handy as a key part of the UI. Also block isolation means more attention to detail, faster coding and even a simpler tools for new coders. I have tested this system myself with a person learning HTML and CSS from scratch and it's very easy to grasp and lets the user focus on designing/coding even without much experience. With isolation comes new concepts to explore like [local CSS](https://medium.com/seek-ui-engineering/the-end-of-global-css-90d2a4a06284), regression testing in styling and [post-css](https://github.com/postcss/postcss) mini frameworks. This is an opportunity to apply these concepts in real cases and see how to start to become part of improved best practices to handle information sites.
 
-You should be ready to serve the site for development with `broccoli serve  --host 0.0.0.0`. This would serve the site on `localhost:4200` and reload as you change files in the source folder. The host option in the serve command is optional but allows you to load the site from other devices on your same network by using your IP, for instance to check mobile versions on real smartphones.
-
-If you want to build the whole site into a local folder you can do `broccoli build dist` and that would create the dist folder with all the required files. You can then go into this folder in your terminal and run `python -m SimpleHTTPServer` to test the standalone compiled site and see it has all files required. The python command starts a server that listen on `localhost:8000`.
+This system can help create a high quality website that is fully customized but has the cost and time reduction of reusing well known information archetypes expressed a blocks (a head, a horizontal quote, a modal window, etc.).
 
 # Understanding the file structure
 
@@ -44,6 +40,24 @@ Take a look in `source/pages` and you'll see how a page is structured. Simply no
 Creating new blocks should be rare as the idea of this website's code structure is exactly to allow you to write copy and structure pages using existing carefuly tuned blocks that are responsive out of the box. However, if you find the need, here's how to create blocks.
 
 To create new blocks you create the markup as an emblem file, then you can add optional sass for your block in `source/global/blocks` as a sass partial. If you add the sass partial you must import it in `source/global/blocks/_blocks.sass`. Block are handlebars templates since they're emblem.js documents, you can use this to customize the markup rendering based on the context. You can even create sophisticated handlerbars helpers by defining the functions in `lib/blocksite-compiler/lib/handlebars.coffee`.
+
+# How to use this repo
+
+Given the short time to apply for Stripe's open source retreat, this is the simplest version of the code I had private and without release. It's now open source and I think the most important part of this readme is to communicate the function and let you browse the source and get the alternative structure that I suggest expressed as a static site generator. However, if you must run it, it works even though it currently doesn't yield the most beatiful site!
+
+You need node v.0.10 or older, then install the following _global dependencies_ with `npm install -g <pkg-name>`:
+
+* broccoli-cli
+* bower
+
+After you have the global deps, you can install this repo's dependencies with:
+
+* `npm install`
+* `bower install`
+
+You should be ready to serve the site for development with `broccoli serve  --host 0.0.0.0`. This would serve the site on `localhost:4200` and reload as you change files in the source folder. The host option in the serve command is optional but allows you to load the site from other devices on your same network by using your IP, for instance to check mobile versions on real smartphones.
+
+If you want to build the whole site into a local folder you can do `broccoli build dist` and that would create the dist folder with all the required files. You can then go into this folder in your terminal and run `python -m SimpleHTTPServer` to test the standalone compiled site and see it has all files required. The python command starts a server that listen on `localhost:8000`.
 
 # Known bugs
 
