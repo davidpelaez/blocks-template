@@ -1,0 +1,20 @@
+footer: .inner
+
+  .social-icons
+
+    .social-icon.twitter: a.icon.icon-twitter href=twitter
+    .social-icon.facebook: a.icon.icon-facebook href=facebook
+  
+  .footer-links
+
+    each columns: ul
+      li: h3 = title
+      each items: li
+        a href=action = title
+
+  /hr
+
+  .footer-logo
+    img src="/assets/white-logo.png" alt="Logo" height="35px" width="116px"
+
+  p = copyright

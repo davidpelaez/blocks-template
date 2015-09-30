@@ -1,0 +1,16 @@
+div class="closing-action #{HTMLclasses}" id=HTMLid: .inner
+
+  .content
+
+    h2.centered-version = title
+    p 
+        = body
+        br
+        small = remark
+
+    with button1: a.button href=action 
+        span class="icon icon-#{icon}"
+        = caption
+    if button2.caption: with button2: a.button.secondary href=action = caption
+
+    if SEOBody: aside = SEOBody

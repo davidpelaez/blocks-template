@@ -1,0 +1,27 @@
+header#navigation class="navigation #{HTMLclasses}"
+
+  .wrapper
+
+    a.logo href="/"
+      img src="/assets/logo.png" alt="Logo" height="50px" width="150px"
+
+    .mobile-only#open-menu-button.button.secondary
+      span.icon-menu
+
+    #main-nav
+
+      .mobile-only#close-menu-button.icon-cross
+
+      ul
+        each items
+          li.nav-link: a href=action id=HTMLid = caption
+        with button1
+          li.mobile-only: a href=action id=HTMLid = caption
+
+    #secondary-nav
+      ul
+        li.phone = phone
+        with button1: li
+          a href=action id=HTMLid = caption
+    
+    /a.navigation-menu-button#js-mobile-menu href="" id="" MENU

@@ -1,0 +1,9 @@
+section class="image-grid"
+
+  .inner 
+    h2.centered-version = title
+    ul
+      each items: li
+        img src=image
+        p = text
+    

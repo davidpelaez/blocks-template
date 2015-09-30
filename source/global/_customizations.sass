@@ -1,0 +1,121 @@
+html, body
+  -webkit-font-smoothing: antialiased !important
+
+//@mixin title-font
+//  font-family: 'Uni Sans Book', Helvetica, Arial, Sans-Serif
+
+.mobile-only
+  +media($desktop)
+    display: none !important
+  +media($mobile)
+    display: auto
+
+=color-customizations($color)
+  .button:not(.secondary)
+    background-color: $color
+    border-color: $color
+    //text-shadow: 0px 1px 1px shade($color,60%) //rgba(0,0,0, 0.3); 
+    &:hover
+      //color: $color
+      color: white
+      //border-color: $color
+      //background-color: transparent !important
+      background-color: lighten($color, 8%)
+      border-color: lighten($color, 8%)
+      //text-shadow: none
+  h1, h2
+
+    &:after
+      background-color: $color 
+
+.highlight-type
+  +subtle-shadow
+
+body
+  +color-customizations($blue)
+
+.red-highlights
+  +color-customizations($red)
+
+.yellow-highlights
+  +color-customizations($yellow)
+
+.green-highlights
+  +color-customizations($green)
+
+.light-text
+  *
+    color: white
+
+
+
+
+#landing-header 
+  //background-image: url('/assets/jogging.jpg')
+  //position: relative
+  a.button:not(.secondary)::after
+    content: ''
+    display: inline-block
+    height: 31px
+    width: 301px
+    position: absolute
+    left: 0
+    top: 5rem
+    //border: solid thin blue !important
+    background-color: transparent 
+    background-image: url('/assets/acceptance-icons.png') 
+    background-repeat: no-repeat
+    background-position: left bottom
+    background-size: 301px 31px
+  //.content
+  //  padding-bottom: $base-spacing * 2 //4rem
+  //  background-color: transparent 
+  //  background-image: url('/assets/acceptance-icons.png') 
+  //  background-repeat: no-repeat
+  //  
+  //  
+  //  +media($mobile)
+  //    background-position: center bottom
+  //    background-size: contain
+  //    background-size: 70%
+  //
+  //  +media($desktop)
+  //    background-position: left bottom
+  //    background-size: 301px 31px
+
+
+
+#landing-benefits
+  // top white to botton gray
+  //+background(linear-gradient(180deg, white 60%, $light-gray))
+  //padding-bottom: $double-base-spacing //$double-base-spacing
+  +media($desktop)
+    .inner
+      border-top: dotted thin $light-gray
+
+#landing-closing-action
+  // top gray to botton white
+  //+background(linear-gradient(0deg, white 60%, $light-gray))
+.box
+  .copy
+    strong
+      //font-family: 'Uni Sans Book'
+      //font-weight: normal !important
+    h3
+      font-family: 'Uni Sans Thin'
+      //line-height: 
+
+#pricing-closing-action
+  h2
+    +font-size(2.5)
+    font-family: 'Uni Sans Light', 'Open Sans', Helvetica, Roboto, Arial, sans-serif
+
+#login
+  text-transform: uppercase
+  border: solid thin white
+  padding: 0.5rem 1rem
+  border-radius: 2px
+  background-color: rgba(47, 63, 78,0.5)
+  +media($mobile)
+    margin-top: 1rem
+    display: inline-block

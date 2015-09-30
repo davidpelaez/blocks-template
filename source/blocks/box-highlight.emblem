@@ -1,0 +1,23 @@
+.box-higlight id=HTMLid
+
+    .box: with box
+
+        .square
+            .copy
+
+                h3.title = title
+                strong.subtitle = subtitle
+                hr / only used to correct a rendering bug
+                small.remark.bigtext-exempt = remark
+
+        small.footnote = footnote
+
+    .content
+
+        h2 = title
+        p = body
+
+        with button1: a.button href=action 
+            span class="icon icon-#{icon}"
+            = caption
+        if button2.caption: with button2: a.button href=action = caption

@@ -1,0 +1,88 @@
+.social-icons
+  //+outer-container
+  //+pad-on-mobile
+  padding-bottom: $double-base-spacing
+  text-align: center
+
+  
+  .social-icon
+    width: 4rem
+    height: 4rem
+    //text-align: center
+    margin: 0 rem(15)
+    display: inline-block
+    background-color: black
+    padding: 1rem 0
+
+    &.facebook
+      background-color: #5071AA
+    &.twitter
+      background-color: #68C6E1
+
+    .icon
+      color: white
+      //height: 2rem
+      //width: 2rem
+      font-size: 2rem
+      line-height: 2rem
+      //position: relative
+      //top: 50%
+      //+transform(translateY(-50%))
+
+footer
+  +pad-on-mobile
+
+  $footer-background: $dark-gray //desaturate(darken($base-accent-color, 20), 30)
+  $footer-color: white
+  $footer-link-color: transparentize($footer-color, 0.6)
+  $footer-disclaimer-color: transparentize($footer-color, 0.6)
+  background: $footer-background
+  padding: $base-spacing * 2 $gutter
+  width: 100%
+  text-align: center
+  
+  .footer-logo
+    margin-bottom: 1rem
+    //img
+    //  height: 3em
+
+  .inner
+    +outer-container
+
+  .footer-links
+
+    +clearfix
+    //margin-bottom: $base-spacing
+    //+media($mobile)
+        
+    ul
+      margin-bottom: $base-spacing * 2
+      +media($desktop)
+        +span-columns(4)
+        //+omega(3n)
+      //  +clearfix
+    li
+      +media($mobile)
+        text-align: center
+      //+media($mobile)
+      //  text-align: left
+    li a
+      color: $footer-link-color
+      &:hover
+        color: transparentize($footer-color, 0)
+    li h3
+      color: $footer-color
+      font-size: 1em
+      font-weight: 800
+      margin-bottom: .4em
+  //hr
+  //  border: 1px solid transparentize($footer-disclaimer-color, 0.3)
+  //  margin: 0 auto $base-spacing
+  //  width: 12em
+  p
+    color: $footer-disclaimer-color
+    font-size: .9em
+    line-height: 1.5em
+    margin: auto
+    max-width: 35em
+    text-align: center

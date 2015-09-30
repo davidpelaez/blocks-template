@@ -1,0 +1,18 @@
+section class="split-white light-text #{HTMLclasses}" style="background-image: url('#{backgroundImage}')"
+  .inner
+    .content.highlight-type
+      h2 = title
+      p = body
+
+      with button1: a.button href=action 
+        span class="icon icon-#{icon}"
+        = caption
+
+      if button2.caption: with button2: a.button.secondary href=action = caption
+
+    if sideImage: .content.side-image: with sideImage
+      img src=url width=width height=height
+
+    if sideVideo: .content.side-video: with sideVideo
+      script 
+

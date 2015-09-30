@@ -1,0 +1,40 @@
+section.split-white
+  //+background(center no-repeat $dark-gray scroll)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center bottom
+  background-color: white
+  
+  &.color
+    background-color: white
+
+  //width: 100%
+
+  +media($mobile)
+    background-position: left bottom
+
+
+
+  &.right-focus
+    +media($mobile)
+      background-position: right bottom
+    +media($desktop)
+      .content
+        +shift(6)
+
+  .inner
+    +outer-container
+    padding: $double-base-spacing 0
+    
+
+    .content
+      +pad-on-mobile
+      +media($desktop)
+        +span-columns(6)
+      //padding: $base-spacing 0
+      h1, h2, h3, p
+        color: $dark-gray !important
+        text-shadow: none
+    .side-image
+      text-align: center
+

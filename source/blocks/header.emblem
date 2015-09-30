@@ -1,0 +1,16 @@
+section id=HTMLid class="header viewport-height #{HTMLclasses}" style="background-image: url('#{backgroundImage}')"
+
+  .inner
+
+    .content.highlight-type
+
+      h1 = title
+      p = body
+
+      with button1: a.button href=action 
+        span class="icon icon-#{icon}"
+        = caption
+
+      if button2.caption: with button2: a.button.secondary href=action = caption
+
+    .scroll-indicator:  span class="icon icon-arrow-34" data-target=scrollTarget

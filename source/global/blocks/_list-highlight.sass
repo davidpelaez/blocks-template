@@ -1,0 +1,43 @@
+.list-higlight
+
+  .inner
+    +outer-container
+    
+    padding: $double-base-spacing 0
+
+  .content
+    +media($desktop)
+      +span-columns(6)
+    +pad-on-mobile
+
+  h2
+    +clearfix
+
+  .list-wrapper
+    +pad-on-mobile
+    +media($mobile)
+      //text-align: left
+      margin-top: $double-base-spacing
+      .icon
+        display: block
+        width: 25%
+        border-bottom: dashed thin $blue
+        margin: 0 auto
+        margin-bottom: 0.25rem
+      li
+        margin-top: 0.5rem
+        margin-bottom: 1.5rem
+      //background-color: $blue
+      //+shift(2)
+    //  +span-columns(6)
+    +media($desktop)
+      +span-columns(5)
+      +shift(1)
+
+    .highlight-item
+      .icon
+        color: $blue
+        font-size: 1.5rem
+        +media($desktop)
+          margin-right: rem(10)
+          vertical-align: middle;

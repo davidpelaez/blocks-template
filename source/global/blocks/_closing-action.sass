@@ -1,0 +1,25 @@
+.closing-action
+
+  .inner
+    +outer-container
+    padding: $double-base-spacing 0
+
+    .content
+      text-align: center
+      +pad-on-mobile
+      +media($desktop)
+        +span-columns(8)
+        +shift(2)
+
+      //small
+      //  +media($desktop)
+      //    +span-columns(4)
+     
+      aside
+        border-bottom: solid thin #eee
+        border-top: solid thin #eee
+        padding: $base-spacing 0
+        margin-top: $double-base-spacing
+        text-align: left
+        font-size: 80%
+        opacity: 0.85

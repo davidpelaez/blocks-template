@@ -1,0 +1,15 @@
+div class="pricing #{HTMLclasses}" id=HTMLid: .inner
+
+  .content
+
+    ul
+        each items: li
+            table
+                tr
+                    td: h4 = title
+                    td: p = text  
+    
+
+
+
+

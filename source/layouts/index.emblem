@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html lang=language
+  head
+    meta charset="UTF-8"
+    meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link rel='shortcut icon' href='/assets/favicon.ico' type='image/x-icon'
+    /link rel="stylesheet" href="http://basehold.it/16"
+    link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'
+    link rel="stylesheet" type="text/css" href="/app.css"
+    title = title
+  body 
+    == yield
+    link href="https://fontastic.s3.amazonaws.com/jfEC8AyEwpDiCxi2UjqAaD/icons.css" rel="stylesheet"
+    script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    script src="/app.js"

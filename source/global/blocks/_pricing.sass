@@ -1,0 +1,45 @@
+.pricing
+
+  .inner
+    +outer-container
+    padding: $double-base-spacing 0
+    padding-top: 0rem
+    padding-bottom: 0rem 
+    margin-top: -2rem
+    margin
+
+    .content
+      text-align: center
+      h4
+        text-align: right
+        margin-right: 2rem
+        margin-bottom: 0
+      p
+        text-align: left
+        margin-left: 2rem
+        margin-bottom: 0
+
+      li
+        padding-top: 1.5rem
+        padding-bottom: 1.5rem
+        margin-top: 0rem
+        margin-bottom: 0rem
+        border-bottom: dotted $light-gray thin
+
+        &:first-child
+          border-top: dotted $light-gray thin
+
+
+      td, td
+        border: none
+
+        
+
+
+
+      +pad-on-mobile
+      +media($desktop)
+        +span-columns(10)
+        +shift(1)
+
+

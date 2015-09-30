@@ -1,0 +1,137 @@
+@mixin font-size($sizeValue: 1.8) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2 {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  margin-bottom: $base-spacing;
+  color: $fake-black;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  &:after {
+    content: ' ';
+    clear: both;
+    background-color: $blue; 
+    display: block;
+    border-radius:3px;
+    width: 60px;
+    height: 3px;
+    margin-top: $base-spacing - rem(6); 
+    @include media($mobile){
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.centered-version:after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+
+}
+
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  margin-bottom: ($base-spacing / 2);
+  color: $fake-black;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  @include font-size(2.5);
+}
+
+h2 {
+  @include font-size(2);
+}
+
+h3 {
+  @include font-size(1.75);
+}
+
+h4 {
+  @include font-size(1.5);
+}
+
+h5 {
+  @include font-size(1.25);
+}
+
+h6 {
+  @include font-size(1);
+}
+
+p {
+  margin: 0;
+  margin-bottom: $base-spacing;
+}
+
+a {
+  @include transition(color 0.1s linear);
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: lighten($base-font-color, 15);
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: "\2014 \00A0";
+  }
+}

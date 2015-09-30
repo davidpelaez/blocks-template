@@ -1,0 +1,7 @@
+section class="highlight-grid #{HTMLclasses}"
+  ul.inner
+    each items: li
+      div class="icon icon-#{icon}"
+      h4 = title
+      p = text
+    

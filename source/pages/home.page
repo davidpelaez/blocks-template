@@ -1,0 +1,94 @@
+---
+layout: index
+title: "Blocks template"
+language: en
+slug: /
+
+sections:
+
+  - block: navigation
+    HTMLid: menu
+    items:
+      - { caption: 'Inicio', action: '#menu' }
+
+    phone: (123) 456-78-90
+
+    button1: { caption: 'Github Repo', action: '/#',  HTMLid: login }
+
+  - title: Blocks template is a prove of concept example of a new CMS paradigm
+    block: header
+
+    backgroundImage: /assets/light-jogging-2560.jpg
+
+    HTMLid: landing-header
+    HTMLclasses: red-highlights
+    scrollTarget: benefits
+
+    body: >
+      Lorem ipsum Aliqua reprehenderit commodo sit fugiat ea sint fugiat tempor ex qui qui esse elit.
+
+    button1: { caption: 'Go to google!', action: https://google.com/, icon: user-arrow  }
+
+
+  - title: Lorem ipsum Sed adipisicing veniam cupidatat 
+    block: list-highlight
+
+    HTMLid: landing-benefits
+    HTMLclasses: yellow-highlights
+
+    body: >
+      Lorem ipsum Ad sint sed in in id anim aliqua cillum labore veniam in consequat veniam aliqua amet dolore culpa dolor do incididunt proident velit adipisicing ex laboris consectetur officia elit nisi irure proident sit dolore.
+
+    button1:
+      caption: Lorem ipsum Nostrud quis Ex
+      action: '#'
+      icon: award
+
+    highlights:
+
+      - { caption: 'Lorem ipsum Nostrud quis Ex', icon: outbox }
+
+      - { caption: 'Lorem ipsum Nostrud quis Ex', icon: paint-roller }
+
+      - { caption: 'Lorem ipsum Nostrud quis Ex', icon: touch }
+
+      - { caption: 'Lorem ipsum Nostrud quis Ex', icon: power }
+
+      - { caption: 'Lorem ipsum Nostrud quis Ex', icon: smartphone }
+
+  - block: footer
+    copyright: Cute footer with copyright
+
+    twitter: https://twitter.com/something
+    facebook: https://facebook.com/elsewhere
+
+    columns:
+
+      - title: Column
+        items:
+          - { title: 'Link A', action: '#a' }
+          - { title: 'Idea B', action: '#b' }
+          - { title: 'Thing C', action: '#c' }
+
+      - title: Column
+        items:
+          - { title: 'Link A', action: '#a' }
+          - { title: 'Idea B', action: '#b' }
+          - { title: 'Thing C', action: '#c' }
+
+  - block: contact-popup
+    form_title: "This is a reusable contact form modal"
+    form:
+      method: "get"
+      action: "//formspree.io/pelaez89@gmail.com"
+      input:
+        - { type: text, name: "name", placeholder: "Name", autofocus: "true", required: "true", maxlength: 45}
+        - { type: "tel", name: "telephone", placeholder: "Phone", required: "true" }
+        - { type: "email", name: "email", placeholder: "E-mail", required: "true", maxlength: 50}
+        - { type: "hidden", name: "_next", value: "https://google.com" }
+      textarea:
+        rows: 4
+        cols: 6
+        placeholder: "Your message"
+      submit: {caption: "SEND", icon: user-add}
+      HTMLclasses: red-highlights

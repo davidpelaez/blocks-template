@@ -1,0 +1,12 @@
+section class="popup #{HTMLclasses}" id="popup-esc" style="background-image: url('#{backgroundImage}')"
+  .outer
+    .inner
+      .left-form
+        h5.capitalize = form_title
+        with form: form action="//formspree.io/something@aloha.com" method="post" autocomplete="on"
+          each input
+            input type=type name=name placeholder=placeholder value=value autofocus="true" required=required validate="true" maxlength=maxlength
+          with textarea: textarea name=name rows=rows cols=cols placeholder=placeholder
+            = textarea
+          input type="submit" value=submit.caption
+      img.close src="/assets/closeButton.png" width="35px" height="35px"

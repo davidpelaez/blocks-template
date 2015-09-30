@@ -1,0 +1,93 @@
+.box-higlight
+
+  +media($desktop)
+    padding: $double-base-spacing 0
+    +outer-container
+    position: relative
+
+  .box
+    //+span-columns(12)
+    +media($desktop)
+      +span-columns(4)
+      +shift(2)
+    //margin-bottom: 5.5rem
+
+    .square
+
+      //float: right
+      background-color: $yellow
+      +media($mobile)
+        padding: 2rem
+      +media($desktop)
+        width: 100%
+        padding-bottom: 100%
+        height: 0
+        margin: 0 auto
+        position: relative
+
+      .copy
+        color: white
+        text-align: center
+        +media($desktop)
+          position: absolute
+          top: 50%
+          +transform(translateY(-50%))
+          left: 0
+          padding: 2rem
+          width: 100%
+
+        *
+          //transition: font 0.3s ease
+          //line-height: 0.85em
+          display: block
+          color: white !important
+
+        .title
+          font-size: rem(90)
+          line-height: 1
+          margin-bottom: 0
+
+        .subtitle
+          font-size: 1rem
+          font-weight: normal
+
+        hr
+          // this corrects a rendering bug
+          height: 0
+          margin: 0
+          border-color: transparent
+
+        .remark
+          margin-top: 1rem
+          font-size: 1rem
+          padding-top: 0.6rem
+          line-height: 1.4rem
+          border-top: dotted 1px white
+
+    .footnote
+      +pad-on-mobile
+      //position: absolute
+      //bottom: -3rem
+      color: #333
+      display: block
+      clear: both
+      line-height: 1.25rem
+      margin-top: 1rem
+      +media($desktop)
+        text-align: left
+        border-left: solid thin $light-gray
+        padding-left: 1rem
+      +media($mobile)
+        margin-bottom: $double-base-spacing
+        text-align: center
+      //+clearfix
+
+  .content
+    //+span-columns(12)
+    +pad-on-mobile
+    +media($desktop)
+      //position: absolute
+      //top: 50%
+      //right: 0
+      //+transform(translateY(-50%))
+      +span-columns(6)

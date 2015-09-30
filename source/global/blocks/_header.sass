@@ -1,0 +1,65 @@
+//$device-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"
+
+section.header
+  
+  //+background(url($device-image), center no-repeat $dark-gray scroll)
+  //+background(center no-repeat $dark-gray scroll)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center bottom
+  background-color: $dark-gray
+  width: 100%
+  //display: table
+
+
+  +media($mobile)
+    background-position: left bottom
+
+
+
+  .inner
+    height: 100%
+    display: table
+    +outer-container
+    +pad-on-mobile
+    // - padding-bottom: $double-base-spacing
+
+    +media($mobile)
+      padding-top: $base-spacing * 3
+    +media($desktop)
+      // - padding-top: $base-spacing * 7
+
+    .scroll-indicator
+      height: auto
+      width: 100%
+      position: absolute
+      bottom: 4rem
+      text-align: center
+      color: white
+      opacity: 0.7
+      font-size: 2rem
+      left: 0
+      //+subtle-shadow
+      +bounce-animation
+      //animation-iteration-count: infinite
+      
+      //+animation-name(bounce3)
+      //+animation-iteration-count(infinite)
+      //transform-origin: center bottom
+      //border: solid thin blue
+
+    .content
+      //+fill-parent
+      +row(table)
+      //display: table-cell
+      vertical-align: middle
+      //+span-columns(12)
+
+      +media($desktop)
+        +span-columns(6)
+      //padding: $base-spacing 0
+
+      +reset-display // required to revert table display
+      h1, p
+        color: white !important
+        +subtle-shadow

@@ -1,0 +1,20 @@
+div class="list-higlight #{HTMLclasses}" id=HTMLid
+    
+  .inner
+
+    h2.content = title
+
+    .content
+      p = body
+
+      with button1: a.button href=action
+        span class="icon icon-#{icon}"
+        =caption
+      if button2.caption: with button2: a.button href=action = caption
+    
+    .list-wrapper
+
+      ul: each highlights
+        li.highlight-item
+          span class="icon icon-#{icon}"
+          = caption

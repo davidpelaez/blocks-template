@@ -1,0 +1,88 @@
+button, input[type="submit"]
+  @extend %button
+  @include appearance(none)
+  border: none
+  cursor: pointer
+  user-select: none
+  vertical-align: middle
+  white-space: nowrap
+
+
+.button
+  
+  color: white
+  padding: 0.05rem 1rem 0 1rem
+  line-height: 3rem
+  height: 3rem
+  margin-bottom: $base-spacing / 2
+
+  +media($mobile)
+    font-size: 0.8rem
+    margin: auto rem(7)
+    //width: 100%
+
+  +media($desktop)
+    font-size: 0.9rem
+    margin-right: rem(15)
+    &:not(.secondary)
+      padding-left: 3rem
+  
+
+  font-family: 'Uni Sans Semibold'
+  letter-spacing: 0.75px
+  +subtle-shadow
+  text-transform: uppercase
+  text-decoration: none
+  
+  color: white
+  //border: solid 1px transpa
+  border-style: solid
+  border-width: 1px
+  //border-color: $blue
+  //background-color: $blue
+
+  display: inline-block
+  border-radius: 2px
+  
+  position: relative
+
+  +transition(all 0.2s ease-in 0s)
+
+  
+    
+
+  &.secondary
+    border-color: white
+    background-color: transparent
+    //padding-left: $ref-padding !important
+    //color: white
+
+    &:hover
+      //opacity: 0.75
+      color: white
+      border-color: rgba(255,255,255,0.3)
+      //background-color: white !important
+      //text-shadow: none
+
+  //&:last-child
+  //  margin-bottom: 0 !important
+
+
+  .icon
+
+    +media($mobile)
+      display: none
+    font-family: 'untitled-font-1'
+    position: absolute
+    font-size: 1.5rem
+    width: 3rem
+    //Vertical center with the text
+    top: 50%
+    left: 0
+    text-align: center
+    //text-shadow: 0px -1px 3px rgba(0,0,0,0.4)
+    //background-color: black
+    +transform(translateY(-50%))
+
+    // This renders better than opacity
+    color: rgba(255,255,255,0.8)s

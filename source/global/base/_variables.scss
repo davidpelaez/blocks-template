@@ -1,0 +1,71 @@
+// Typography
+$sans-serif: $helvetica;
+$serif: $georgia;
+
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+$base-font-family: 'Open Sans', $sans-serif;
+$header-font-family: 'Uni Sans Book', $base-font-family;
+
+// Font Sizes
+$base-font-size: 16px;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 1px;
+$base-spacing: 2rem;
+$double-base-spacing: $base-spacing * 2;
+$base-z-index: 0;
+
+// Reused Colors
+$blue: #4378DD; // regular blue for buttons lighter
+$dark-blue: #0B5690; // slightly darker (e.g. footer) from sketch
+$dark-gray: #2F3F4E; // blueish dark altenrative to regular dark gray for bgs
+$green: #319E0D;
+$yellow: #FCAF16;
+$red: #F04305;
+
+// Other colors
+$fake-black: #333;
+
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Background Color
+$base-background-color: white;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $red;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: lighten($base-accent-color, 40);
+$success-color: $light-green;
+
+// Border color
+$base-border-color: $medium-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
